@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w[language-pack-en apache2 libapache2-mod-php5 php5-cli tmux vim curl php5-mcrypt].each do |pkg|
+%w[language-pack-en apache2 libapache2-mod-php5 php5-cli tmux vim curl php5-mysql php5-mcrypt].each do |pkg|
   package pkg do
     action :install
   end
@@ -137,3 +137,14 @@ template '/etc/scigrad/database.php' do
   })
 
 end
+
+link '/var/www/scigrad/Config/database.php' do
+  to '/etc/scigrad/database.php'
+end
+
+bash 'make tmp writable' do
+  user 'root'
+  code "chown -R #{node['scigrad']['web_server_group']} /var/www/scigrad/tmp"
+  action :run
+end
+
