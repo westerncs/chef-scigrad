@@ -8,5 +8,5 @@ version          '0.1.0'
 
 supports 'ubuntu'
 
-depends 'database'
-depends 'mysql'
+depends 'database', '~> 2.3.0'
+depends 'mysql', '5.5.3'

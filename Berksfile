@@ -1,7 +1,7 @@
 source "https://supermarket.getchef.com"
 
-cookbook 'database'
-cookbook 'mysql'
+cookbook 'database', '~> 2.3.0'
+cookbook 'mysql', '5.5.3'
 
 metadata
 
