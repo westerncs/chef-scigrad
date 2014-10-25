@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w[language-pack-en apache2 libapache2-mod-php5 php5-cli tmux vim curl php5-mysql php5-mcrypt].each do |pkg|
+%w[language-pack-en apache2 libapache2-mod-php5 php5-cli tmux vim curl php5-mysql php5-mcrypt ruby1.9.1-dev].each do |pkg|
   package pkg do
     action :install
   end
