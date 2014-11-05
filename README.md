@@ -61,6 +61,7 @@ sudo mkdir /var/www
 sudo chown vagrant /var/www
 cd /var/www
 git clone https://github.com/westerncs/scigrad.git
+mkdir scigrad/tmp
 ```
 
 You'll be prompted for your GitHub username and password.  You can set up a public/private keypair, if you like, but we'll assume you're using HTTPS here for brevity.
